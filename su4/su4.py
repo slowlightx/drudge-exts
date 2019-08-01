@@ -525,9 +525,9 @@ def _swap_su4(vec1: Vec, vec2: Vec, depth=None, *,spec: _SU4Spec):
         elif char2 == _RAISE2:
             return _UNITY, _NEGTWO * delta * spec.ymz[indice1]
         elif char2 == _YPZ:
-            return _UNITY, Rational(1,2) * delta * spec.lower2[indice1]
+            return _UNITY, Integer(2) * delta * spec.lower2[indice1]
         elif char2 == _YZP:
-            return _UNITY, Rational(1,2) * delta * spec.lower1[indice1]
+            return _UNITY, Integer(2) * delta * spec.lower1[indice1]
         elif char2 == _YPM:
             return _UNITY, _NOUGHT
         elif char2 == _YZZ:
@@ -642,7 +642,7 @@ def get_vev_of_term(term,n1):
             break
     return [Term(sums=term.sums,amp = t_amp,vecs=())]
 
-_QUARTER = Rational(1,2)
+_QUARTER = Rational(1,4)
 _NEGHALF = -Rational(1,2)
 _NEGTWO = -Integer(2)
 _UNITY = Integer(1)
