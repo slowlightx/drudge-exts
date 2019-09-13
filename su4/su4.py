@@ -105,7 +105,7 @@ class SU4LatticeDrudge(GenQuadDrudge):
         self.ymp = ymp
         self.ypz = ypz
         self.yzp = yzp
-        self.ymz = ymp
+        self.ymz = ymz
         self.yzm = yzm
         
         self.set_name(**{
@@ -642,7 +642,7 @@ def get_vev_of_term(term,n1):
             break
     return [Term(sums=term.sums,amp = t_amp,vecs=())]
 
-_QUARTER = Rational(1,2)
+_QUARTER = Rational(1,4)
 _NEGHALF = -Rational(1,2)
 _NEGTWO = -Integer(2)
 _UNITY = Integer(1)
